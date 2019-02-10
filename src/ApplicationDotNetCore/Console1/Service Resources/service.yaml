@@ -17,4 +17,4 @@ application:
                   memoryInGB: 1
           replicaCount: 1
           networkRefs:
-            - name: ApplicationDotNetCoreNetwork
+            - name: ApplicationDotNetCoreNetwork          

@@ -6,7 +6,7 @@ gateway:
     sourceNetwork:
       name: Open
     destinationNetwork:
-      name: Application2Network
+      name: ApplicationDotNetCoreNetwork
     tcp:
       - name: Web1TCP
         port: "[parameters('Web1_ingressport')]"
