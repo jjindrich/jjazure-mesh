@@ -1,0 +1,21 @@
+﻿## Service definition ##
+application:
+  schemaVersion: 1.0.0-preview2
+  name: ApplicationDotNetCore
+  properties:
+    services:
+      - name: Console1
+        properties:
+          description: Console1 description.
+          osType: Windows
+          codePackages:
+            - name: Console1
+              image: console1:dev
+              resources:
+                requests:
+                  ##cpu: "[parameters('Console1_cpu')]"
+                  cpu: 1
+                  memoryInGB: 1
+          replicaCount: 1
+          networkRefs:
+            - name: ApplicationDotNetCoreNetwork

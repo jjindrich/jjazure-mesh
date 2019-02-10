@@ -1,0 +1,4 @@
+## Parameters file ##
+Console1_cpu: 0.5
+Web1_cpu: 0.5
+Web1_ingressport: 8080

@@ -1,0 +1,16 @@
+gateway:
+  schemaVersion: 1.0.0-preview2
+  name: ApplicationDotNetCoreGateway
+  properties:
+    description: ApplicationDotNetCore Gateway Resource
+    sourceNetwork:
+      name: Open
+    destinationNetwork:
+      name: Application2Network
+    tcp:
+      - name: Web1TCP
+        port: "[parameters('Web1_ingressport')]"
+        destination:
+          applicationName: ApplicationDotNetCore
+          serviceName: Web1
+          endpointName: Web1Listener

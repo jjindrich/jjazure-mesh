@@ -1,0 +1,18 @@
+## Visual Studio SFApp Publish Profile ##
+vsSFAppPublishProfile:
+  schemaVersion: 1.0.0-preview2
+  resourceGroupName: MeshApp-rg
+  subscription:
+    id: 82fb79bf-ee69-4a57-a76c-26153e544afe
+    name: JJ Microsoft Azure Internal Consumption
+    tenant: &o0
+      id: 5bf07991-ef59-43e0-861c-ab35a6cfc932
+      uniqueId: 4eccc244-8dcc-4dc9-ac23-bc4e3aa5cc71
+  location:
+    name: westeurope
+    displayName: West Europe
+  containerRegistry:
+    serverName: jjcontainers.azurecr.io
+    userName: jjcontainers
+    resourceId: /subscriptions/82fb79bf-ee69-4a57-a76c-26153e544afe/resourceGroups/TEST/providers/Microsoft.ContainerRegistry/registries/jjcontainers
+    tenant: *o0

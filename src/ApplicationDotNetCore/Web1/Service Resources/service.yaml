@@ -1,0 +1,29 @@
+﻿## Service definition ##
+application:
+  schemaVersion: 1.0.0-preview2
+  name: ApplicationDotNetCore
+  properties:
+    services:
+      - name: Web1
+        properties:
+          description: Web1 description.
+          osType: Windows
+          codePackages:
+            - name: Web1
+              image: web1:dev
+              endpoints:
+                - name: Web1Listener
+                  port: 80
+#              environmentVariables:
+#                - name: ApplicationInsights:InstrumentationKey
+#                  value: "<Place AppInsights key here, or reference it via a secret>"
+              resources:
+                requests:
+                  #cpu: "[parameters('Web1_cpu')]"
+                  cpu: 1
+                  memoryInGB: 1
+          replicaCount: 1
+          networkRefs:
+            - name: ApplicationDotNetCoreNetwork
+              endpointRefs:
+                - name: Web1Listener
