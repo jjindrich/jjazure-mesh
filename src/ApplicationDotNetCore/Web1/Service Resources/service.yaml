@@ -19,8 +19,7 @@ application:
 #                  value: "<Place AppInsights key here, or reference it via a secret>"
               resources:
                 requests:
-                  #cpu: "[parameters('Web1_cpu')]"
-                  cpu: 1
+                  cpu: "[parameters('Web1_cpu')]"
                   memoryInGB: 1
           replicaCount: 1
           networkRefs:

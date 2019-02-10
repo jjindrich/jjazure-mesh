@@ -13,8 +13,7 @@ application:
               image: console1:dev
               resources:
                 requests:
-                  ##cpu: "[parameters('Console1_cpu')]"
-                  cpu: 1
+                  cpu: "[parameters('Console1_cpu')]"
                   memoryInGB: 1
           replicaCount: 1
           networkRefs:
